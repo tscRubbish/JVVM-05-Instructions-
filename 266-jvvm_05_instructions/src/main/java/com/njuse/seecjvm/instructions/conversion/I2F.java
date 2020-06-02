@@ -11,6 +11,6 @@ public class I2F extends NoOperandsInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getOperandStack().pushFloat((float) frame.getOperandStack().popInt());
     }
 }

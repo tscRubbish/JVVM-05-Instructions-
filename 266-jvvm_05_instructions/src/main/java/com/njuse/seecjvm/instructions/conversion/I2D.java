@@ -11,6 +11,6 @@ public class I2D extends NoOperandsInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getOperandStack().pushDouble((double) frame.getOperandStack().popInt());
     }
 }
