@@ -2,6 +2,7 @@ package com.njuse.seecjvm.instructions.conversion;
 
 import com.njuse.seecjvm.instructions.base.NoOperandsInstruction;
 import com.njuse.seecjvm.runtime.StackFrame;
+import com.njuse.seecjvm.runtime.struct.Slot;
 
 public class I2S extends NoOperandsInstruction {
 
@@ -12,6 +13,9 @@ public class I2S extends NoOperandsInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-        frame.getOperandStack().pushInt((short) frame.getOperandStack().popInt());
+        int i=frame.getOperandStack().popInt();
+        int s=(short)i;
+        Slot slot=new Slot();slot.setValue(s);
+        frame.getOperandStack().pushSlot(slot);
     }
 }

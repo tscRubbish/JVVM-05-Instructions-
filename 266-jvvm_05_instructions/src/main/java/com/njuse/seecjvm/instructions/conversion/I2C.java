@@ -2,6 +2,7 @@ package com.njuse.seecjvm.instructions.conversion;
 
 import com.njuse.seecjvm.instructions.base.NoOperandsInstruction;
 import com.njuse.seecjvm.runtime.StackFrame;
+import com.njuse.seecjvm.runtime.struct.Slot;
 
 public class I2C extends NoOperandsInstruction {
 
@@ -11,6 +12,9 @@ public class I2C extends NoOperandsInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-        frame.getOperandStack().pushInt((char)frame.getOperandStack().popInt());
+        int i=frame.getOperandStack().popInt();
+        int s=(char)i;
+        Slot slot=new Slot();slot.setValue(s);
+        frame.getOperandStack().pushSlot(slot);
     }
 }
