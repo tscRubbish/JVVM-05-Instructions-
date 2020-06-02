@@ -81,7 +81,7 @@ public class OperandStack {
         long l=0;
         top-=2;
         if (top<0) throw new EmptyStackException();
-        l=slots[top].getValue()+(slots[top+1].getValue()<<32);
+        l=slots[top].getValue()+((long)slots[top+1].getValue()<<32);
         return l;
     }
 
