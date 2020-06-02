@@ -10,6 +10,8 @@ public class IMUL extends NoOperandsInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        int d2=frame.getOperandStack().popInt();
+        int d1=frame.getOperandStack().popInt();
+        frame.getOperandStack().pushInt(d1*d2);
     }
 }

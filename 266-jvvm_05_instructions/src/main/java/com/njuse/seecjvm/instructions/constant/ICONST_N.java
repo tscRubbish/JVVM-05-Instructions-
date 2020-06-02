@@ -18,7 +18,7 @@ public class ICONST_N extends NoOperandsInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getOperandStack().pushInt(this.val);
     }
 
     @Override

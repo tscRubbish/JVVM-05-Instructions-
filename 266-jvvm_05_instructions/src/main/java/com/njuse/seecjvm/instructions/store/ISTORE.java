@@ -11,6 +11,6 @@ public class ISTORE extends Index8Instruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getLocalVars().setInt(index,frame.getOperandStack().popInt());
     }
 }

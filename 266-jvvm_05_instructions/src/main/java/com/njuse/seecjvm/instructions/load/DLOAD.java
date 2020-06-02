@@ -11,6 +11,6 @@ public class DLOAD extends Index8Instruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getOperandStack().pushDouble(frame.getLocalVars().getDouble(index));
     }
 }

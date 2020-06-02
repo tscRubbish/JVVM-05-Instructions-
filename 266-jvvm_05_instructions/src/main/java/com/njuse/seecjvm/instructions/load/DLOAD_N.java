@@ -13,6 +13,6 @@ public class DLOAD_N extends LOAD_N {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getOperandStack().pushDouble(frame.getLocalVars().getDouble(index));
     }
 }

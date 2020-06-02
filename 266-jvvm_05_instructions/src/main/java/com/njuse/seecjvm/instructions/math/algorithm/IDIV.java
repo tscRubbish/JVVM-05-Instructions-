@@ -10,6 +10,8 @@ public class IDIV extends NoOperandsInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        int i2=frame.getOperandStack().popInt();
+        int i1=frame.getOperandStack().popInt();
+        frame.getOperandStack().pushInt(i1/i2);
     }
 }

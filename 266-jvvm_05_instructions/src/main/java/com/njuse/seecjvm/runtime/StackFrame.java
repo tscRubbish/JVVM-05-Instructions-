@@ -13,6 +13,13 @@ public class StackFrame {
     private int nextPC;
     private Method method;
 
+    public OperandStack getOperandStack() {
+        return operandStack;
+    }
+    public Method getMethod() {
+        return method;
+    }
+
     public StackFrame(JThread thread, Method method, int maxStackSize, int maxVarSize) {
         this.thread = thread;
         this.method = method;

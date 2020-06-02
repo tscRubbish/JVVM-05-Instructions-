@@ -14,6 +14,6 @@ public class ISTORE_N extends STORE_N {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getLocalVars().setInt(index,frame.getOperandStack().popInt());
     }
 }

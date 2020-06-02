@@ -13,6 +13,6 @@ public class ILOAD_N extends LOAD_N {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        frame.getOperandStack().pushInt(frame.getLocalVars().getInt(index));
     }
 }

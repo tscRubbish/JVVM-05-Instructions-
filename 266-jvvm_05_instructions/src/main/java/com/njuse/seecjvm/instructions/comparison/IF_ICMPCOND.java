@@ -10,7 +10,11 @@ public abstract class IF_ICMPCOND extends BranchInstruction {
      */
     @Override
     public void execute(StackFrame frame) {
-
+        int i2=frame.getOperandStack().popInt();
+        int i1=frame.getOperandStack().popInt();
+        if (condition(i1,i2)){
+            frame.setNextPC(frame.getNextPC()-3+offset);
+        }
     }
 
     protected abstract boolean condition(int v1, int v2);
