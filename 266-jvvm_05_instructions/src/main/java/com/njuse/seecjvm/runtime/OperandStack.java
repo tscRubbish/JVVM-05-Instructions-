@@ -67,8 +67,8 @@ public class OperandStack {
      */
     public void pushLong(long value) {
         if (top+1>=maxStackSize) throw new StackOverflowError();
-        slots[top].setValue((int)(value&0xFFFFFFFF));
-        slots[top+1].setValue((int)((value>>32)&0xFFFFFFFF));
+        slots[top+1].setValue((int)(value&0xFFFFFFFF));
+        slots[top].setValue((int)((value>>32)&0xFFFFFFFF));
         top+=2;
     }
 
@@ -81,7 +81,7 @@ public class OperandStack {
         long l=0;
         top-=2;
         if (top<0) throw new EmptyStackException();
-        l=slots[top].getValue()+((long)slots[top+1].getValue()<<32);
+        l=slots[top+1].getValue()+(((long)slots[top].getValue())<<32);
         return l;
     }
 

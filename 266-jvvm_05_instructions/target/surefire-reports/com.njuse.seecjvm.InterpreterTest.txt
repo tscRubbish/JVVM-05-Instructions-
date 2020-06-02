@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.njuse.seecjvm.InterpreterTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.169 sec <<< FAILURE!
-testConditions(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.015 sec  <<< ERROR!
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.08 sec <<< FAILURE!
+testConditions(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.013 sec  <<< ERROR!
 java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)
@@ -39,7 +39,7 @@ java.lang.ClassNotFoundException
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testJmp(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.103 sec  <<< ERROR!
+testJmp(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.004 sec  <<< ERROR!
 java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)
@@ -76,7 +76,7 @@ java.lang.ClassNotFoundException
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testMath(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.001 sec  <<< ERROR!
+testMath(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.005 sec  <<< ERROR!
 java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)
@@ -113,7 +113,7 @@ java.lang.ClassNotFoundException
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testConversion(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.001 sec  <<< ERROR!
+testConversion(com.njuse.seecjvm.InterpreterTest)  Time elapsed: 0.005 sec  <<< ERROR!
 java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)

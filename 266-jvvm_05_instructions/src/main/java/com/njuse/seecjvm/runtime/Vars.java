@@ -56,7 +56,7 @@ public class Vars {
      */
     public long getLong(int index) {
         if (index<0||index+1>=maxSize) throw new IndexOutOfBoundsException();
-        return varSlots[index].getValue()+(varSlots[index+1].getValue()<<32);
+        return varSlots[index+1].getValue()+(((long)varSlots[index].getValue())<<32);
     }
 
     public void setDouble(int index, double value) {

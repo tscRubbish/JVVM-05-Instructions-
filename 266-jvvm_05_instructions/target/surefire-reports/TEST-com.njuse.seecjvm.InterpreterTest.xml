@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.njuse.seecjvm.InterpreterTest" time="0.12" errors="4" skipped="0">
+<testsuite tests="4" failures="0" name="com.njuse.seecjvm.InterpreterTest" time="0.027" errors="4" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="13.0.1+9"/>
@@ -59,7 +59,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testConditions" time="0.015">
+  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testConditions" time="0.013">
     <error type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)
@@ -135,7 +135,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </system-err>
   </testcase>
-  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testJmp" time="0.103">
+  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testJmp" time="0.004">
     <error type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)
@@ -211,7 +211,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </system-err>
   </testcase>
-  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testMath" time="0.001">
+  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testMath" time="0.005">
     <error type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)
@@ -287,7 +287,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </system-err>
   </testcase>
-  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testConversion" time="0.001">
+  <testcase classname="com.njuse.seecjvm.InterpreterTest" name="testConversion" time="0.005">
     <error type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException
 	at com.njuse.seecjvm.classloader.ClassLoader.loadNonArrayClass(ClassLoader.java:65)
 	at com.njuse.seecjvm.classloader.ClassLoader.loadClass(ClassLoader.java:48)
