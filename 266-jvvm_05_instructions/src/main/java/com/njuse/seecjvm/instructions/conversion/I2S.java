@@ -14,6 +14,6 @@ public class I2S extends NoOperandsInstruction {
     public void execute(StackFrame frame) {
         int i=frame.getOperandStack().popInt();
         Short s=(short)i;
-        frame.getOperandStack().pushInt(s);
+        frame.getOperandStack().pushInt((int)s);
     }
 }

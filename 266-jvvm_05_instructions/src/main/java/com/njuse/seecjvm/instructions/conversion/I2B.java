@@ -13,6 +13,6 @@ public class I2B extends NoOperandsInstruction {
     public void execute(StackFrame frame) {
         int i=frame.getOperandStack().popInt();
         byte b=(byte)i;
-        frame.getOperandStack().pushInt(b);
+        frame.getOperandStack().pushInt((int)b);
     }
 }

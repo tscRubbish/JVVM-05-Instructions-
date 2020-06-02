@@ -13,6 +13,6 @@ public class I2C extends NoOperandsInstruction {
     public void execute(StackFrame frame) {
         int i=frame.getOperandStack().popInt();
         char c=(char)i;
-        frame.getOperandStack().pushInt(c);
+        frame.getOperandStack().pushInt((int)c);
     }
 }
