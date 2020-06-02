@@ -58,7 +58,4 @@ public class InterpreterTest {
         Interpreter.interpret(thread);
     }
 
-
-
-
 }

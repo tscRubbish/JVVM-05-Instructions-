@@ -66,10 +66,9 @@ public class OperandStack {
      * @param value 变量的值
      */
     public void pushLong(long value) {
-        if (top+1>=maxStackSize) throw new StackOverflowError();
-        slots[top+1].setValue((int)(value&0xFFFFFFFF));
-        slots[top].setValue((int)((value>>32)&0xFFFFFFFF));
-        top+=2;
+        pushInt((int)(0xFFFFFFFFL&value));
+        pushInt((int)((0xFFFFFFFF00000000L&value)>>32));//超级玄学的位运算
+        //System.out.println("in"+top+":  "+value+" "+(int)(0xFFFFFFFFL&value)+" "+(int)((0xFFFFFFFF00000000L&value)>>32));
     }
 
     /**
@@ -79,9 +78,9 @@ public class OperandStack {
      */
     public long popLong() {
         long l=0;
-        top-=2;
-        if (top<0) throw new EmptyStackException();
-        l=slots[top+1].getValue()+(((long)slots[top].getValue())<<32);
+        int i1=popInt(),i2=popInt();
+        l=(((long)i1<<32)&0xFFFFFFFF00000000L)|((long)i2&0x00000000ffffffffL);//超级玄学的位运算
+        //System.out.println("Out"+top+":   "+l+" "+(((long)i1<<32)&0xFFFFFFFF00000000L)+" "+((long)i2&0x00000000ffffffffL));
         return l;
     }
 
